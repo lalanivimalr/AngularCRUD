@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/AngularCore.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myCtrl" ng-init="GetEmployeeData()">
+        <table>
+            <tr ng-repeat="emp in employees">
+                <td>{{emp.Emp_Name}}</td>
+                <td>{{emp.Emp_Age}}</td>
+                <td>{{emp.Emp_City}}</td>
+                <td><input type="button" value="Delete" ng-click="delete(emp)"/> </td>
+            </tr>
+        </table> 
+        <div>
+            <div class="row">
+                <label class="col-md-4 control-label">Name:</label>  
+                <input type="text" ng-model="Employee.Emp_Name" />
+            </div>
+            <div class="row">
+                <label class="col-md-4 control-label">Age:</label>
+                <input type="text" ng-model="Employee.Emp_Age" />
+            </div>
+            <div class="row">
+                <label class="col-md-4 control-label">City:</label>
+                <input type="text" ng-model="Employee.Emp_City" />
+            </div>
+            <div class="row">                
+                <input type="button" value="Submit" ng-click="Add()" />
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
