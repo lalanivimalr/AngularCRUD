@@ -10,6 +10,7 @@ namespace AngularCRUD.Controllers
         public ActionResult Index()
         {
             return View();
+			//return View();
         }
         //demo 3
         public ActionResult About()
